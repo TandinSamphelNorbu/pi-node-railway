@@ -1,0 +1,9 @@
+version: '3'
+services:
+  pi-node:
+    build: .
+    ports:
+      - "31400:31400"
+    restart: unless-stopped
+    environment:
+      PI_WALLET_ADDRESS: ${PI_WALLET_ADDRESS}
